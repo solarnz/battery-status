@@ -25,7 +25,7 @@ def parse_csv_np():
     # convert timestamp to datetime, but also select only relevant
     # fields to avoid having to specify all
     # XXX: it seems that datetime is not what plot expects, so stick
-    # with float and we convert later    
+    # with float and we convert later
     #return data.astype([('timestamp', 'datetime64[s]'),
     #                    ('energy_full', 'f'),
     #                    ('energy_full_design', 'f'),
@@ -95,10 +95,10 @@ def build_graph(data):
 
     # Set the formatter
     ax.yaxis.set_major_formatter(formatter)
-    
+
 def render_graph():
     if sys.stdout.isatty() and args.outfile == sys.stdout:
-        print "drawing on tty"
+        print("drawing on tty")
         plt.show()
     else:
         plt.savefig(args.outfile, bbox_inches='tight')
